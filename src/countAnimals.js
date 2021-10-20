@@ -11,11 +11,11 @@ function countAnimals(animal) {
     }, {});
   }
   if (!animal.sex) {
-    return species.find((valueSpecie) =>
-      valueSpecie.name === animal.specie).residents.length;
+    return species.find((specie) =>
+      specie.name === animal.specie).residents.length;
   }
-  return species.find((valueSpecie) =>
-    valueSpecie.name === animal.specie).residents
+  return species.find((specie) =>
+    specie.name === animal.specie).residents
     .filter((valueSex) => valueSex.sex === animal.sex).length;
 }
 
